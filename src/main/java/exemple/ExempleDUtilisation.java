@@ -8,9 +8,20 @@ import java.awt.Font;
 public class ExempleDUtilisation {
 
     public static void main(String[] args) {
-        new ExempleDUtilisation().exemple();
+        new ExempleDUtilisation().myexemple();
     }
-
+    public void myexemple() {
+        Bandeau monBandeau = new Bandeau();
+        monBandeau.setMessage("Hola");
+        Font font = monBandeau.getFont();
+        Color back = monBandeau.getBackground();
+        Color fore = monBandeau.getForeground();
+        Scenario scenario = new Scenario();
+        scenario.addeffet(new Clignotant(), 2);
+        scenario.addeffet(new Zoom(),2);
+        scenario.addeffet(new Rotation(),2);
+        scenario.start(monBandeau);
+    }
     public void exemple() {
         Bandeau monBandeau = new Bandeau();
         Font font = monBandeau.getFont();
